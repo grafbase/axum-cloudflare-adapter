@@ -1,5 +1,11 @@
 [workspace]
-edition = "2021"
 resolver = "2"
 
 members = ["adapter", "example", "macros"]
+
+[workspace.package]
+edition = "2021"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
